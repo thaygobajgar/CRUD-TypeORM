@@ -18,7 +18,7 @@ const ensureUserExistsByIdMiddleware = async (
     });
 
     if (!user || user.id !== req.params.id) {
-      throw new AppError("aqui", 404);
+      throw new AppError("User not found", 404);
     }
   }
 
